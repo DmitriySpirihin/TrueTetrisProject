@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 8bb44aa6a76d7d445964b1fc1dd5d6e0
+  - enabled: 1
+    path: Assets/Scenes/Puzzle.unity
+    guid: c866402b0cd29374c8a4176d1c2ef984
+  - enabled: 1
+    path: Assets/Scenes/Reversed.unity
+    guid: 2a24420cf15450f4bb3ec6ddc14a1748
+  - enabled: 1
+    path: Assets/Scenes/Timer.unity
+    guid: ae6529bc254ba9b4d872adf627314c51
   m_configObjects: {}

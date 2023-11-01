@@ -9,35 +9,48 @@ public class SaveData : MonoBehaviour
 {
     public static SaveData Instance;
 
-   public int record;
-   public string dateString;
+   
+
+   public int sprite=0,col=0;
+
    public string playerName="player";
    public float volume=1,vibration=1;
    public int[] records=new int[4]{0,0,0,0};
    public string[] names=new string[4]{"-","-","-","-"};
    //rang
-   public string[] dates=new string[4]{"-","-","-","-"};
+   public string[] rangs=new string[4]{"-","-","-","-"};
+   
+   public int score,lines;
+   public int[,] grid=new int[10,22];
+   
 
+   
 
     private void Awake()
    {
     
-    string path= Application.persistentDataPath + "/TrueTetris.save";
-
+    string path= Application.persistentDataPath + "/TrueTetris.sav";
+ 
    if(File.Exists(path))
     {
        Data data = SaveSystem.loadData();
+      
+       
 
-       if(data.record!=null){record=data.record;}
+       if(data.sprite!=null){sprite=data.sprite;}
+       if(data.col!=null){col=data.col;}
        if(data.playerName!=null){playerName=data.playerName;}
        if(data.vibration!=null){vibration=data.vibration;}
        if(data.volume!=null){volume=data.volume;}
        if(data.records!=null){records=data.records;}
       if(data.names!=null){names=data.names;}
-       if(data.dates!=null){dates=data.dates;}
+       if(data.rangs!=null){rangs=data.rangs;}
+       if(data.score!=null){score=data.score;}
+       if(data.lines!=null){lines=data.lines;}
+       if(data.grid!=null){grid=data.grid;}
        
     }
-
+    
      if(Instance ==null)
      {
        DontDestroyOnLoad(gameObject);
@@ -45,20 +58,5 @@ public class SaveData : MonoBehaviour
      } else if(Instance!=this){Destroy(gameObject);}
    }
    
-    public void OnRecord(int rec,string rang)
-    {
-       if(rec>record)
-      {
-         record=rec;
-       
-          if(records[0]<record)
-          {
-            records[3]=records[2];records[2]=records[1];records[1]=records[0];records[0]=record;
-            names[3]=names[2];names[2]=names[1];names[1]=names[0];names[0]=playerName;
-            dates[3]=dates[2];dates[2]=dates[1];dates[1]=dates[0];dates[0]=rang;
-          }
-        SaveSystem.SaveData(SaveData.Instance);
-       
-      }
-    }
+   
 }

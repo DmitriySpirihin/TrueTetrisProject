@@ -17,7 +17,7 @@ public class TableSorter : MonoBehaviour
         {
             recordTexts[i].text=$"{SaveData.Instance.records[i]}";
             nameTexts[i].text=SaveData.Instance.names[i];
-            dateTexts[i].text=SaveData.Instance.dates[i];
+            dateTexts[i].text=SaveData.Instance.rangs[i];
         }
         }
     }

@@ -8,7 +8,7 @@ public static class SaveSystem
   public static void SaveData(SaveData player)
   {
    BinaryFormatter bf=new BinaryFormatter();
-   string path= Application.persistentDataPath + "/TrueTetris.save";
+   string path= Application.persistentDataPath + "/TrueTetris.sav";
    FileStream file=new FileStream(path,FileMode.Create);
 
     Data data=new Data(player);
@@ -20,7 +20,7 @@ public static class SaveSystem
 
  public static Data loadData()
 {
-    string path= Application.persistentDataPath + "/TrueTetris.save";
+    string path= Application.persistentDataPath + "/TrueTetris.sav";
     if(File.Exists(path))
     {
       BinaryFormatter bf=new BinaryFormatter();

@@ -7,24 +7,29 @@ public class Data
 
 {
    
-    public int record;
+    public int sprite,col;
    public string playerName;
-   public string dateString;
    public float volume,vibration;
    public int[] records;
    public string[] names;
-   public string[] dates;
+   public string[] rangs;
+   public int score,lines;
+   public int[,] grid;
 
-
+  
    public Data (SaveData player)
  {
-    record=player.record;
+  
+  col=player.col;
+   sprite=player.sprite;
     playerName=player.playerName;
-    dateString=player.dateString;
     volume=player.volume;
     vibration=player.vibration;
     records=player.records;
     names=player.names;
-    dates=player.dates;
+    rangs=player.rangs;
+    score=player.score;
+    lines=player.lines;
+    grid=player.grid;
  }
 }
