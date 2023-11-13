@@ -71,16 +71,16 @@ public class PuzzleLogic : MonoBehaviour
         dropSpeed=0.2f;
       }
       if(score<1000/4){rang="dweeb";}
-        else if(score>1000/4 && score<2000/4){rang="liner";}
-        else if(score>2000/4 && score<3000/4){rang="slammer";}
-        else if(score>3000/4 && score<4000/4){rang="puzzler";}
-        else if(score>4000/4 && score<5000/4){rang="blockstar";}
-        else if(score>5000/4 && score<6000/4){rang="gridmaster";}
-        else if(score>6000/4 && score<7000/4){rang="blockboss";}
-        else if(score>7000/4 && score<8000/4){rang="blockKing";}
-        else if(score>8000/4 && score<9000/4){rang="blockmaestro";}
-        else if(score>9000/4 && score<10000/4){rang="highblockster";}
-        else if(score>10000/4){rang="tetrisin";}
+        else if(score>1000/5 && score<2000/5){rang="liner";}
+        else if(score>2000/5 && score<3000/5){rang="slammer";}
+        else if(score>3000/5 && score<4000/5){rang="puzzler";}
+        else if(score>4000/5 && score<5000/5){rang="blockstar";}
+        else if(score>5000/5 && score<6000/5){rang="gridmaster";}
+        else if(score>6000/5 && score<7000/5){rang="blockboss";}
+        else if(score>7000/5 && score<8000/5){rang="blockKing";}
+        else if(score>8000/5 && score<9000/5){rang="blockmaestro";}
+        else if(score>9000/5 && score<10000/5){rang="highblockster";}
+        else if(score>10000/5){rang="tetrisin";}
     
    }
    public void OnCheckLines()
@@ -118,7 +118,7 @@ public class PuzzleLogic : MonoBehaviour
        music.clip=treks[Random.Range(0,treks.Length)];
        music.Play();
        FillPuzzleBlocks(level);
-       score+=(level*100)+200-droppCount;
+       score+=(level*100)+260-droppCount;
        droppCount=3;
        scoreText.text=$"{score}";
      }
